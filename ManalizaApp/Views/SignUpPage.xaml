@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ManalizaApp.SignUpPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <Image Source="ManalizaLogo.png" WidthRequest="200"/>
+            </Frame>
+            <StackLayout
+            VerticalOptions="Center"
+            Margin="20">
+
+            <Label
+                Text=""
+                HorizontalOptions="Center"
+                TextColor="#0075be"
+                FontSize="30"
+                Margin="0,20"/>
+            <Entry
+                Placeholder="Mail"
+                Keyboard="Email"
+                x:Name="EmailInput" />
+            <Entry
+                Placeholder="Şifre"
+                IsPassword="True"
+                x:Name="PasswordInput" />
+            <Button
+                Text="Üye Ol"
+                Clicked="SignUpClicked"
+                Margin="60,40"
+                CornerRadius="20"
+                BackgroundColor="#0077be"
+                TextColor="White" />
+            <Button
+                Text="Giriş Yap"
+                Clicked="LoginPageClicked"
+                Background="#Transparent"
+                HorizontalOptions="Center"
+                CornerRadius="20"
+                TextColor="#0077be"/>
+
+        </StackLayout>
+      </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ManalizaApp.HomePage"
+             Title="Manaliza">
+    <ContentPage.Content>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="Start">
+                <Label Text="Kayıt Oluşturma Formu" FontAttributes="Bold" FontSize="Title" TextColor="Gray" HorizontalOptions="Center"/>
+
+                <Entry 
+                    Text="{Binding FirstName}" 
+                    Placeholder="Adınız"/>
+
+                <Entry 
+                    Text="{Binding LastName}" 
+                    Placeholder="Soyadınız"/>
+
+                <Entry 
+                    Text="{Binding Plaque}" 
+                    Placeholder="Plakanız(boşluk bırakmadan yazınız)"/>
+
+                <Entry 
+                    Text="{Binding Company}"
+                    x:Name="EntryCompany"
+                    Focused="ShowCompanySelectionPage"
+                    Placeholder="Çalıştığınız Firma"  />
+
+                <Entry 
+                    Text="{Binding Customer}" 
+                    x:Name="EntryCustomer"
+                    Focused="ShowCustomerSelectionPage"
+                    Placeholder="Teslim Edeceğiniz Müşteri"/>
+
+                <Entry 
+                    Text="{Binding Stock}" 
+                    x:Name="EntryStock"
+                    Focused="ShowStockSelectionPage"
+                    Placeholder="Malzeme"/>
+                <Entry 
+                    Text="{Binding PlaceOfOperation}" 
+                    x:Name="EntryPlaceOfOperation"
+                    Focused="ShowPlaceOfOperationSelectionPage"
+                    Placeholder="Şantiye Alanı"/>
+
+                <Button 
+                    WidthRequest="200" 
+                    Text="Ekle" 
+                    Command="{Binding AddEntryCommand}" />
+                
+                <Entry 
+                    Text="{Binding CompanyCode}"
+                    x:Name="EntryCompanyCode"
+                    Focused="ShowCompanySelectionPage"
+                    Opacity="0"
+                    Placeholder="Çalıştığınız Firma"  />
+                <Entry 
+                    Text="{Binding CustomerCode}"
+                    x:Name="EntryCustomerCode"
+                    Focused="ShowCompanySelectionPage"
+                    Opacity="0"
+                    Placeholder="Çalıştığınız Firma"  />
+
+            </StackLayout>
+            <ListView Grid.Row="1" 
+                      x:Name="lstDrivers"
+                      ItemsSource="{Binding Drivers}"
+                      ItemTapped="OnItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding FirstName}"/>
+                                <Label Text="{Binding LastName}"/>
+                                <Label Text="{Binding Plaque}"/>
+                                <Label Text="{Binding Company}"/>
+                                <Label Text="{Binding Customer}"/>
+                                <Label Text="{Binding PlaceOfOperation}"/>
+                            </StackLayout>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Grid.Row="2">
+                <Button WidthRequest="200" Text="Çıkış Yap" Clicked="SignOutButton_Clicked"/>
+            </StackLayout>
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>

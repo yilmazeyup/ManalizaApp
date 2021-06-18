@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "420673473111",
+    "project_id": "manalizaapplication",
+    "storage_bucket": "manalizaapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:420673473111:android:fde9707ec4820092687112",
+        "android_client_info": {
+          "package_name": "com.companyname.manalizaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "420673473111-nnp321jqikjbsfcqq1glnaoq6fli9736.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXBITs-yKK4CD0fHDzHz5GRAd1Ghg-rRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "420673473111-nnp321jqikjbsfcqq1glnaoq6fli9736.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
